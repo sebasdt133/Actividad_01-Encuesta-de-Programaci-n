@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta</title>
+  <link rel="stylesheet" href="./css/estilo.css">
+  <script src="./js/vue.global.js"></script>
+</head>
+<body>
+  <section id="app">
+    <div class="contenedor">
+      <div class="titulo">Encuesta de Programación</div>
+      <div class="pregunta">
+        <p>¿Te gusta programar?</p>
+        <label><input type="radio" v-model="gustaProgramar" value="Sí"> Sí</label>
+        <label><input type="radio" v-model="gustaProgramar" value="No"> No</label>
+      </div>
+      <div class="pregunta">
+        <p>¿Cuánto años llevas programando?</p>
+        <input type="number" v-model="aniosProgramando">
+      </div>
+      <div class="pregunta">
+        <p>Cuéntanos tu experiencia programando</p>
+        <textarea v-model="experienciaProgramando" rows="4" cols="50"></textarea>
+      </div>
+      <div class="pregunta">
+        <p>¿Cuántos lenguajes de programación conoces?<br>Ingrese los lenguajes uno por uno</p>
+        <input type="text" v-model="nuevoLenguaje">
+        <button @click="agregarLenguaje">Agregar</button>
+        <ul>
+          <li v-for="(lenguaje, index) in lenguajes":key="index">{{lenguaje}}</li>
+        </ul>
+      </div>
+      <button class="mostrar-resultados" @click="mostrarResultados=true">Mostrar resultados</button>
+      <div v-if="mostrarResultados" class="resultados">
+        <h2>Resultados de la Encuesta</h2>
+        <p>¿Te gusta programar?:{{gustaProgramar}}</p>
+        <p>Años programando:{{aniosProgramando}}</p>
+        <p>Experiencia:{{experienciaProgramando}}</p>
+        <p>Lenguajes conocidos:</p>
+        <ul>
+          <li v-for="(lenguaje,index) in lenguajes":key="index">{{lenguaje}}</li>
+        </ul>
+        <button class="cerrar-resultados" @click="mostrarResultados=false">Cerrar resultados</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

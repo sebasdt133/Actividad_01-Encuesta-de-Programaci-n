@@ -1,0 +1,95 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    font-family: cursive;
+    background-color: #ffffff;
+  }
+  
+  .contenedor 
+  {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: left;
+  }
+  
+  .titulo 
+  {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d0084b;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .pregunta 
+  {
+    margin-bottom: 10px;
+  }
+  
+  .pregunta p 
+  {
+    font-size: 18px;
+    color: #0275d3;
+  }
+  
+  button 
+  {
+    background-color: #3d458e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover 
+  {
+    background-color: #4dbcbe;
+  }
+  
+  ul 
+  {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .mostrar-resultados 
+  {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .resultados 
+  {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .resultados h2 
+  {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .resultados p 
+  {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .cerrar-resultados 
+  {
+    background-color: #f44336;
+    margin-top: 20px;
+  }
+  
